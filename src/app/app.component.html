@@ -1,0 +1,112 @@
+<h1>template driven form:</h1>
+
+<div class="maindiv">
+  <div class="mydiv">
+    <form #registration="ngForm" (ngSubmit)="submit(registration.value)">
+      <label>first name:</label><br>
+      <input type="text" name="firstname" placeholder="plz enter your first name" ngModel><br><br>
+
+      <label>last name:</label><br>
+      <input type="text" name="lastname" placeholder="plz enter your last name" ngModel><br><br>
+
+      <label>email address:</label><br>
+      <input type="text" name="email" placeholder="plz enter your email address" ngModel><br><br>
+
+      <label>city:</label><br>
+      <input type="text" name="city" placeholder="plz enter your city" ngModel><br><br>
+
+      <label>mobile number:</label><br>
+      <input type="text" name="mobno" placeholder="plz enter your mobile number" maxlength="10" ngModel><br><br>
+
+      <button type="submit">submit</button>
+    </form>
+  </div>
+</div>
+<br><br><br>
+
+<div class="maindiv1">
+  <div class="mydiv1">
+    <label>your first name:</label><br>
+    <input type="text" value="{{info.first}}" placeholder="your first name" readonly><br><br>
+
+    <label>your last name:</label><br>
+    <input type="text" value="{{info.last}}" placeholder="your last name" readonly><br><br>
+
+    <label>your email address:</label><br>
+    <input type="text" value="{{info.email}}" placeholder="your email address" readonly><br><br>
+
+    <label>your city:</label><br>
+    <input type="text" value="{{info.city}}" placeholder="your city" readonly><br><br>
+
+
+    <label>your mobile number:</label><br>
+    <input type="text" value="{{info.mobile}}" placeholder="your mobile number" readonly>
+
+  </div>
+
+</div>
+<br><br>
+<hr class="hr">
+<br><br>
+
+<h1>reactive form (model driven form) with using validators :</h1>
+
+
+<div class="maindiv">
+  <div class="mydiv">
+    <form [formGroup]="formdata" (ngSubmit)="submitted(formdata.value)">
+      <label>first name:</label><br>
+      <input type="text" [ngClass]="{'for-border' : formdata.controls.firstname.invalid}" name="firstname"
+        formControlName="firstname" placeholder="plz enter your first name"><br>
+      <span *ngIf="formdata.controls.firstname.invalid">please enter your firstname</span><br><br>
+
+      <label>last name:</label><br>
+      <input type="text" [ngClass]="{'for-border' : formdata.controls.lastname.invalid}" name="lastname"
+        formControlName="lastname" placeholder="plz enter your last name"><br>
+      <span *ngIf="formdata.controls.lastname.invalid">please enter your last name</span><br><br>
+
+      <label>email address:</label><br>
+      <input type="text" [ngClass]="{'for-border' : formdata.controls.email.invalid}" name="email"
+        formControlName="email" placeholder="plz enter your email address"><br>
+      <span *ngIf="formdata.controls.email.invalid">please enter your email address</span><br><br>
+
+      <label>city:</label><br>
+      <input type="text" [ngClass]="{'for-border' : formdata.controls.city.invalid}" name="city" formControlName="city"
+        placeholder="plz enter your city"><br>
+      <span *ngIf="formdata.controls.city.invalid">please enter your city name</span><br><br>
+
+      <label>mobile number:</label><br>
+      <input type="text" [ngClass]="{'for-border' : formdata.controls.mobilenumber.invalid}" name="mobilenumber"
+        formControlName="mobilenumber" placeholder="plz enter your mobile number" maxlength="10"><br>
+      <span *ngIf="formdata.controls.mobilenumber.invalid">please enter your mobile number</span><br><br>
+
+      <button type="submit">submit</button>
+
+    </form>
+  </div>
+</div>
+<br><br><br><br>
+
+
+
+<div class="maindiv1">
+  <div class="mydiv1">
+    <label>your first name:</label><br>
+    <input type="text" value="{{allinfo.one}}" placeholder="your first name" readonly><br><br>
+
+    <label>your last name:</label><br>
+    <input type="text" value="{{allinfo.two}}" placeholder="your last name" readonly><br><br>
+
+    <label>your email address:</label><br>
+    <input type="text" value="{{allinfo.three}}" placeholder="your email address" readonly><br><br>
+
+    <label>your city:</label><br>
+    <input type="text" value="{{allinfo.four}}" placeholder="your city" readonly><br><br>
+
+
+    <label>your mobile number:</label><br>
+    <input type="text" value="{{allinfo.five}}" placeholder="your mobile number" readonly>
+
+  </div>
+
+</div>

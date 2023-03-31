@@ -1,0 +1,63 @@
+*{
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+h1{
+    padding-left: 40px;
+}
+.maindiv{
+    border: 2px solid black;
+    height: 620px;
+    width: 80%;
+    margin: auto;
+}
+.mydiv{
+    padding-top: 15px;
+}
+label{
+    font-size: large;
+    padding-left: 20px;
+    font-weight: bold;
+}
+input{
+    width: 85%;
+    padding: 10px;
+    font-size: large;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button{
+    padding: 10px;
+    margin-left: 20px;
+    font-size: large;
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    border: 0;
+    width: 10%;
+    border-radius: 5px;
+}
+.maindiv1{
+    border: 2px solid black;
+    height: 500px;
+    width: 80%;
+    margin: auto;
+
+}
+.mydiv1{
+    padding-top: 15px;
+
+}
+.hr{
+    padding: 2px;
+    background-color: brown;
+}
+span{
+    padding-left: 20px;
+    color: red;
+}
+.for-border{
+    border: 2px solid red;
+}
